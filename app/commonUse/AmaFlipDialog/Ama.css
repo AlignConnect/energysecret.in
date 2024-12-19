@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+
+
+
+.ptoductSubTitle {
+    background-color: #ffa800;
+    padding: 1.2rem 0rem 0.5rem;
+    text-align: center;
+    font-weight: 800 !important;
+    font-size: 1.5rem !important;
+}
+
+.buytrusted {
+    padding: 1rem;
+    background-color: #f7fff0;
+    text-align: center;
+    font-weight: 800;
+    border: 1px solid #eafbdb;
+    border-radius: 5px;
+    margin: 0rem 1rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.amazonFlipDialog {
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.webtrust {
+    font-size: 1.3rem !important;
+}
+
+.webicon {
+    width: 5rem;
+}
+
+.paraFlipAma {
+    font-size: 1.2rem !important;
+}
+
+.mainFlipCom {
+    display: grid;
+    justify-content: center;
+    margin: 1rem 0rem;
+}
+
+.mainFlipContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fingImg {
+    width: fit-content;
+}
+
+.fingImg11 {
+    width: fit-content;
+    transform: scaleX(-1);
+}
+
+.OrderNowPopAmaFlip {
+    animation: zoominzoomoutama 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    display: inline-grid;
+}
+
+
+.arrowAmaFlip-3 {
+    animation: k3 1s linear infinite alternate;
+}
+
+.AmaFlipPop {
+    width: 100%;
+}
+
+@keyframes k3 {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.arrowAmaFlip-4 {
+    animation: k4 1s linear infinite alternate;
+}
+
+@keyframes k4 {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translateX(50%);
+    }
+}
+
+
+
+@keyframes zoominzoomoutama {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+
+@media (max-width:768px) {
+    .buytrusted {
+        margin: 0rem;
+        padding: 1rem 0.7rem;
+    }
+
+    .ptoductSubTitle {
+        font-size: 1.1rem !important;
+    }
+
+    .webtrust {
+        font-size: 1.1rem !important;
+    }
+
+    .webicon {
+        width: 3rem;
+    }
+
+    .paraFlipAma {
+        font-size: 1.1rem !important;
+    }
+
+    .fingImg {
+        width: 20%;
+    }
+
+    .fingImg11 {
+        width: 20%;
+    }
+
+}

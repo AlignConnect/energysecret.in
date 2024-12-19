@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Raj K",
+        "image": "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/a627f04c-d450-4613-e882-a2bae93f9900/public",
+        "review": "Yah best tablet hai jo mujhe pure din urjavan aur joshila rakhta hai, iske khane ke bad mera performance bhi kafi improve hua hai."
+    },
+    {
+        "id": 2,
+        "name": "Anil Mandal",
+        "image": "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/a3a4e114-bb65-49ac-7e59-3a156ff5d700/public",
+        "review": "Pahle maine bahut sare products try kiye the par koi fayda nhi mila even kai bar headeche aur stomach pain hota hai par Horse Fire Tablet se mujhe bahut fayda mila."
+    },
+    {
+        "id": 3,
+        "name": "Momammad Zahid",
+        "image": "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/b5433fd4-05af-44cb-a1a6-473e0ed97000/public",
+        "review": "Pahle medical ke chakkar lga rha tha, paise ki barbadi bhi hoti thi aur nuksan ka dar bhi lga rhta tha par Horse Fire Tablet ne sab kuchh badal diya. ab kisi aur goli ki jarurat nhi padti."
+    },
+    {
+        "id": 4,
+        "name": "Rathin Chowdhury",
+        "image": "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/6eac5f18-da75-4cdc-b7d6-530ba267ab00/public",
+        "review": "Horse Fire Tablet is very effective for men who experience stress, anxiety, and low stamina at night. I found it very beneficial."
+    }
+ 
+]
