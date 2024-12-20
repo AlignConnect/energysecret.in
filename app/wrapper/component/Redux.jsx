@@ -198,8 +198,8 @@ const Redux = ({ children }) => {
 
         dispatch(getStoreProductInfo({
             productsdata: data,
-            allVariants: data?.variants?.slice().reverse(),
-            selectProducts: data?.variants[1]
+            allVariants: data?.variants?.slice(),
+            selectProducts: data?.variants[0]
         }))
 
     }, [data])

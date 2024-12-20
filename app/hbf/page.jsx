@@ -29,7 +29,7 @@ const FooterP = dynamic(() => import('@/app/commonUse/bottompopup/BottomHandler'
 const page = () => {
 
     useEffect(() => {
-        localStorage.setItem("PATH_KEY", "/hds")
+        localStorage.setItem("PATH_KEY", "/hbf")
     }, [])
 
 

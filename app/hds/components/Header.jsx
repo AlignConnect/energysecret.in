@@ -1,77 +1,105 @@
-import dynamic from "next/dynamic";
-import React from "react";
-// import { Carousel } from 'react-responsive-carousel'
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 
 
-const Sec1cp = dynamic(() => import("./Sec1cp"), {
-  loading: () => <p>loader</p>,
-});
-
-const Sec2 = dynamic(() => import("./Sec2"), {
-  loading: () => <p>loader</p>,
-});
 
 const Header = () => {
 
-  const carouselImage = [
-    "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/5ab6777d-5b2a-4eb0-a974-cae27ec66200/public",
-    "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/867a1634-c5e5-4785-1757-abf2e3c64200/public",
-    "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/fd01fe46-8e47-4ac8-ab70-1fcae07af100/public",
-    "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/2dcebc65-59f7-42e1-0c7d-9f9d15c01700/public",
-  ]
+
+    const navLinks = [
+        {
+            name: " Why Horsefire Tablet",
+            path: "/why-horsefire"
+        },
+        {
+            name: "Customer Support",
+            path: "https://wa.me/9099857272?text=Hi"
+        },
+    ];
 
 
-  const settings = {
-    customPaging: function (i) {
-      return (
-        <div>
-          <img
-            src={carouselImage[i]}
-            alt={`Thumbnail ${i}`}
-            className="w-full mx-auto mih-h-[80px]"
-          />
-        </div>
-      );
-    },
-    dots: true,
-    dotsClass: "slick-dots slick-thumb slick-dots_custom h-[100px] sm:h-[170px]",
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    className: "h-[55vh] sm:h-[80vh]"
-  };
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleNev = () => {
+        setMenuOpen(!menuOpen);
+    }
+
+    return (
+        <section className="bg-black">
+
+            <div className="flex items-center md:justify-between justify-around py-4 px-1">
+                <div className="flex items-center gap-2 ">
+                    <div className="">
+                        <img src="/main/home_images/logo.webp" alt="" className='w-16 md:w-20 mx-auto' />
+                    </div>
+                    <div className="">
+                        <div className="flex items-center gap-1">
+                            <div className="fontPoppins uppercase text-yellow-500 md:text-xl text-md font-semibold">
+                                Horsefire Tablet
+                            </div>
+                            <img src="/main/home_images/verify.svg" alt="" className='w-4' />
+                        </div>
+                        <div className="fontPoppins text-white text-[0.7rem]">
+                            THE GOOD MEN SECRET
+                        </div>
+                    </div>
+                </div>
+
+                <div className="fontPoppins">
+                    <div className="hidden sm:block">
+
+                        <div className="text-md flex justify-center items-center gap-6">
+                            {navLinks.map((link, index) => {
+                                return (
+                                    <Link href={link.path} key={index}>
+                                        <div className=' text-white hover:text-blue-500' key={index}>{link.name}</div>
+                                    </Link>
+                                )
+                            })}
+                        </div>
+                    </div>
+
+                    <div onClick={handleNev} className="md:hidden cursor-pointer pl-16">
+                        <AiOutlineMenu size={25} color='white' />
+                    </div>
+                </div>
+
+                <div className={
+                    menuOpen ?
+                        "fixed right-0 top-0 w-[65%] sm:hidden h-screen bg-white p-5 ease-out duration-500"
+                        : "fixed right-[-100%] w-[65%] h-screen top-0 p-10 ease-in duration-700"
+                }
+                >
+                    <div className="flex w-full items-center justify-end py-3">
+                        <div onClick={handleNev} className="cursor-pointer text-white">
+                            <AiOutlineClose size={22} color='black' />
+                        </div>
+                    </div>
+
+                    <div className="fontPoppins">
+                        <ul className=''>
+                            {navLinks.map((link, index) => {
+                                return (
+                                    <Link onClick={() => setMenuOpen(false)} href={link.path} key={index}>
+                                        <li className='text-black hover:text-blue-500 py-3' key={index}>{link.name}</li>
+                                    </Link>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
 
-  return (
-    <section className="">
-
-  
-      <Slider {...settings}>
-
-        {carouselImage.map((img, index) => (
-          <div key={index} className="">
-            <img src={img} alt={`Product ${index + 1}`} />
-          </div>
-        ))}
+            <div className="py-3 mx-2">
+                <img src="/main/home_images/header_couple.jpg" alt="" className='w-full md:w-4/6 mx-auto rounded-md ' />
+            </div>
 
 
-      </Slider>
+        </section>
+    )
+}
 
-
-
-      <Sec1cp />
-      {/*  <Sec2 /> */}
-    </section>
-  );
-};
-
-export default Header;
+export default Header
