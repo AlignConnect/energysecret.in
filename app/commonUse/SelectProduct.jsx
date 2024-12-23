@@ -1,4 +1,5 @@
 import ShiProcket from "@/app/commonUse/shiprocket";
+import { useGetShopifyDataQuery } from "@/lib/service/product.service";
 import {
   selectProductById,
   decrementQuantity,
@@ -13,15 +14,11 @@ const SelectProduct = () => {
   const searchParams = useSearchParams();
 
   const taboola_tracking = searchParams.get("tbclid");
-
-
   const dispatch = useDispatch();
   const { allVariants, selectProducts } = useSelector((state) => state.productslice);
 
-
-
-  // const allVariants = productInfo?.allVariants;
-  // const selectProducts = productInfo?.selectProducts;
+  // using this data to get product image 
+  const { data } = useGetShopifyDataQuery({ id: "9565083402555" });
 
   const handleChangeSingleVarient = (event) => {
     const variantId = event.target.value;
@@ -35,6 +32,9 @@ const SelectProduct = () => {
 
   // buyDirect:function(e){shiprocketCheckoutDirectHandler(e),l({name:"MANUAL_INTEG_".concat(null==e?void 0:e.type,"_BUTTON_CLICKED"),category:null==e?void 0:e.type})}
 
+
+  // get product images
+  const imageSrc = data?.images?.find((x) => String(x?.id) === String(selectProducts?.image_id))?.src;
 
   const reasons = (arr) => {
     return arr?.map((e, key) => {
@@ -55,17 +55,21 @@ const SelectProduct = () => {
   };
 
   return (
-    <div className="bg-white pt-5 poppinsFont sm:pt-10">
+    <div className="bg-white poppinsFont">
       <div className="max-w-5xl mx-auto  px-3  ">
         <div className="grid sm:grid-cols-2 items-center sm:gap-3" id="form">
           <div className="">
-            <img
-              src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/f7e0bb49-6b41-487d-adcb-c7102b40d400/public"
-              alt="pic"
-              className="w-full "
-              loading="lazy"
-              id="buynow"
-            />
+            {imageSrc ? (
+              <img
+                src={imageSrc}
+                alt="pic"
+                className="w-full"
+                loading="lazy"
+                id="buynow"
+              />
+            ) : (
+              <p>Product image's not available</p> // This can be a fallback message or a placeholder image
+            )}
           </div>
 
           <div className="">
