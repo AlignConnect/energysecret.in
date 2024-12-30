@@ -26,6 +26,9 @@ const nextConfig = {
 
         // 
 
+        NEXT_APP_URL_HDM: 'https://energysecret.in/hdm',
+        NEXT_APP_API_KEY_HDM: 'okSGOKYLsFWZYZXTBDnKwuDtQVCSSTGLGXLsfcYXoXHYvHAlqr',
+
 
         NEXT_APP_URL_HDS: 'https://energysecret.in/hds',
         NEXT_APP_API_KEY_HDS: 'TRWOGPltkXjINUZKudWLqoFggHQNSJwBKtQHtBTirxtYbYXvrk',

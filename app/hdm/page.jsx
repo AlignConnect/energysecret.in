@@ -23,8 +23,11 @@ const Footer_Home = dynamic(() => import('./components/Footer_home'), {
 });
 
 const FooterP = dynamic(() => import('@/app/commonUse/bottompopup/BottomHandler'), {
-  loading: () => <p>loader</p>
+    loading: () => <p>loader</p>
 });
+
+const Form = dynamic(() => import('./components/Form'));
+
 
 const page = () => {
 
@@ -38,10 +41,13 @@ const page = () => {
             <div>
                 <Header />
                 <Content />
-                <SelectProduct />
+                {/* <SelectProduct /> */}
+
+                <Form />
+
                 <ContentSecond />
                 <Footer_Home />
-                <FooterP/>
+                <FooterP />
             </div>
         </section>
 

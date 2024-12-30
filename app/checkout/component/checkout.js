@@ -223,6 +223,17 @@ export const handleCheckApiKey = () => {
                 break;
 
 
+
+            case "/hds":
+                get_next_url = process.env.NEXT_APP_URL_HDS;
+                get_next_key = process.env.NEXT_APP_API_KEY_HDS;
+                break;
+
+            case "/hdm":
+                get_next_url = process.env.NEXT_APP_URL_HDM;
+                get_next_key = process.env.NEXT_APP_API_KEY_HDM;
+                break;
+
             default:
                 get_next_url = process.env.NEXT_APP_URL;
                 get_next_key = process.env.NEXT_APP_API_KEY;

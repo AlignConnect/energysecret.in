@@ -75,21 +75,21 @@ export default function RootLayout({ children }) {
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '866087288461258');
+          fbq('init', '990087449249435');
           fbq('track', 'PageView');
         `}
       </Script>
 
       <Script
         strategy="lazyOnload"
-        src={`https://www.facebook.com/tr?id=866087288461258&ev=PageView&noscript=1`}
+        src={`https://www.facebook.com/tr?id=990087449249435&ev=PageView&noscript=1`}
       />
       {/* meta pixel facebook tag end  */}
 
       {/* Mgid Sensor  */}
       <Script strategy="lazyOnload">
         {`
-        (function() { var d = document, w = window; w.MgSensorData = w.MgSensorData || []; w.MgSensorData.push({ cid:847503, project: "a.mgid.com" }); var l = "a.mgid.com"; var n = d.getElementsByTagName("script")[0]; var s = d.createElement("script"); s.type = "text/javascript"; s.async = true; var dt = !Date.now?new Date().valueOf():Date.now(); s.src = "https://" + l + "/mgsensor.js?d=" + dt; n.parentNode.insertBefore(s, n); })();
+         (function() { var d = document, w = window; w.MgSensorData = w.MgSensorData || []; w.MgSensorData.push({ cid:847503, project: "a.mgid.com" }); var l = "a.mgid.com"; var n = d.getElementsByTagName("script")[0]; var s = d.createElement("script"); s.type = "text/javascript"; s.async = true; var dt = !Date.now?new Date().valueOf():Date.now(); s.src = "https://" + l + "/mgsensor.js?d=" + dt; n.parentNode.insertBefore(s, n); })();
         `}
       </Script>
       {/* Mgid Sensor  */}
