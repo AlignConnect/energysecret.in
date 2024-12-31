@@ -232,3 +232,18 @@ html {
 .activeStatus2 {
   background-color: #fbcd14;
 }
+
+
+.order-now {
+  animation: 0.5s sfr alternate infinite;
+}
+
+@keyframes sfr {
+  0% {
+    scale: 110%;
+  }
+
+  100% {
+    scale: 100%;
+  }
+}
