@@ -51,27 +51,27 @@ const Form = () => {
       let trackingUrl = "";
 
       // let tracker = searchParams.get("krt-tracker");
-      const searchParamss_krt = searchParams.get("krt");
-      const searchParamss_krttracker = searchParams.get("krttracker");
-      const mgid_ad = searchParams.get("hftmgidtrack");
+      // const searchParamss_krt = searchParams.get("krt");
+      // const searchParamss_krttracker = searchParams.get("krttracker");
+      // const mgid_ad = searchParams.get("hftmgidtrack");
 
-      searchParamss_krttracker && formdata.append('conversions_tracking', searchParamss_krttracker);
-      searchParamss_krt && formdata.append("conversions", searchParamss_krt);
+      // searchParamss_krttracker && formdata.append('conversions_tracking', searchParamss_krttracker);
+      // searchParamss_krt && formdata.append("conversions", searchParamss_krt);
       // const adsKeeper = searchParams.get("hfttrack");
 
 
-      if (mgid_ad) {
-        trackingUrl = `https://a.mgid.com/postback?c=${mgid_ad}&e=hftmgidtrack&r={payout}`
-      }
-      try {
-        await fetch(trackingUrl, {
-          method: "GET",
-          mode: "no-cors",
-        });
-        console.log("tracking is successfully....");
-      } catch (error) {
-        console.error("Tracking error:", error);
-      }
+      // if (mgid_ad) {
+      //   trackingUrl = `https://a.mgid.com/postback?c=${mgid_ad}&e=hftmgidtrack&r={payout}`
+      // }
+      // try {
+      //   await fetch(trackingUrl, {
+      //     method: "GET",
+      //     mode: "no-cors",
+      //   });
+      //   console.log("tracking is successfully....");
+      // } catch (error) {
+      //   console.error("Tracking error:", error);
+      // }
 
       try {
         setLoading(true)

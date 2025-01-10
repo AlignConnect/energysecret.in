@@ -100,7 +100,7 @@ const Content = () => {
                     </div>
 
                     <div>
-                        <img src="/main/home_images/flip.webp" alt="" className='w-full md:w-3/4 mx-auto' />
+                        <img src="/main/home_images/flip_new.webp" alt="" className='w-full md:w-3/4 mx-auto' />
                     </div>
 
                 </div>
