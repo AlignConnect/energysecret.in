@@ -100,7 +100,7 @@ const Form = () => {
 
   }
 
-  return (<div className="bg-[#2a2a2a] rounded-md p-2 my-5" id="form">
+  return (<div className="bg-[#2a2a2a] rounded-md p-2 my-5" id="buynow">
 
     {
       loading && <FormLoader />

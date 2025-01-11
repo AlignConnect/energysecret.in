@@ -8,14 +8,14 @@ const Header = dynamic(() => import('./components/Header'), {
     loading: () => <p>loader</p>
 });
 
-const Content = dynamic(() => import('./components/Content'), {
+const Story = dynamic(() => import('./components/Story'), {
     loading: () => <p>loader</p>
 });
 
 const SelectProduct = dynamic(() => import("../commonUse/SelectProduct"));
 
-const ContentSecond = dynamic(() => import('./components/Second_content'), {
-    loading: () => <p>loader</p>
+const CustomerReview = dynamic(() => import('./components/CustomerReview'), {
+    loading: () => <p>Loading</p>
 });
 
 const Footer_Home = dynamic(() => import('./components/Footer_home'), {
@@ -37,15 +37,16 @@ const page = () => {
 
 
     return (
-        <section className="fontPoppins w-full md:max-w-6xl mx-auto ">
+        <section className="fontPoppins w-full md:max-w-4xl mx-auto bg-white">
             <div>
                 <Header />
-                <Content />
+                <Story />
                 {/* <SelectProduct /> */}
 
                 <Form />
 
-                <ContentSecond />
+                <CustomerReview />
+
                 <Footer_Home />
                 <FooterP />
             </div>
