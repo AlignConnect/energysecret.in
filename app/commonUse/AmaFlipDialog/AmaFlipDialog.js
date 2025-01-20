@@ -37,7 +37,7 @@ const AmaFlipDialog = ({ flipcartlink, type }) => {
                         <section className="text-end p-3" style={{ fontFamily: "sans-serif" }}>
                             <button className="text-xl !text-black font-extrabold" onClick={() => {
                                 closePopup();
-                                window.location.href = closeurl;
+                                window.location.href = "https://arayurveda.shop/products/horse-fire-tablets";
                             }}>
                                 X
                             </button>

@@ -176,7 +176,6 @@ const Story = () => {
                 हॉर्सफायर मदद करता है
             </div>
 
-            
             <img src="/main/htb_images/p8.webp" alt="" className='w-72 sm:w-3/6 mx-auto py-2' />
 
 
